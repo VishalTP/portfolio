@@ -40,7 +40,7 @@ const Ecommerce = ({ third, setFourth }) => {
                         </Fade>
                         <Image>
                             <Fade bottom duration={2000}>
-                                <img src="ecommerce.png" />
+                                <img src="./ecommerce.png" />
                             </Fade>
                         </Image>
                         <Buttons>
