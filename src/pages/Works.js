@@ -12,13 +12,13 @@ const Works = ({ first, setSecond }) => {
     useEffect(() => {
         if (!inView) return
 
-        window.scrollTo({
-            top: first + 1,
-            left: 0,
-            behavior: 'smooth'
-        });
-        if(first)
-            setSecond(first+ reff.current.clientHeight)
+        // window.scrollTo({
+        //     top: first + 1,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        // if(first)
+        //     setSecond(first+ reff.current.clientHeight)
     }, [inView])
 
 

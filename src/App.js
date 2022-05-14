@@ -2,19 +2,19 @@ import './App.css';
 import Intro from './pages/Intro';
 import Works from './pages/Works';
 import Skills from './pages/Skills';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Ecommerce from './pages/Ecommerce';
 import MovieApp from './pages/MovieApp';
 import WeatherApp from './pages/WeatherApp';
 
-import { Parallax, ParallaxLayer } from '@react-spring/web'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 function App() {
 
   // const show = (e)=>{
   //   console.log(e)
   // }
-  const [first, setFirst] = useState(0)
+  const [first, setFirst] = useState("0vh")
   const [second, setSecond] = useState(0)
   const [third, setThird] = useState(0)
   const [fourth, setFourth] = useState(0)
@@ -24,14 +24,28 @@ function App() {
   //   console.log(second)
   // },[second])
 
+  const reff = useRef()
+
+  const handleScroll = (e)=>{
+    e.deltaY>0 ? console.log("up"): console.log("down")
+    setFirst(prev => e.deltaY > 0 ? (prev === "500vh"? prev : +(prev.split("v")[0]) +100+"vh"): (prev === "0vh" ? prev : +(prev.split("v")[0]) - 100+"vh")) 
+    console.log(first)
+  }
+
   useEffect(()=>{
     window.scroll(0,0)
+    // window.addEventListener("scroll", handleScroll)
   }, [])
+
   return (
-    <div className="App">
+    <div className="App" onWheelCapture={handleScroll} ref={reff} 
+      style ={{
+        transform: `translate3d(0, ${first}, 0)`,
+        transition: "all 700ms ease 0s"
+      }} >
 
 
-<Parallax pages={2} style={{ top: '0', left: '0' }}>
+{/* <Parallax pages={2} style={{ top: '0', left: '0' }}>
   <ParallaxLayer
     offset={0}
     speed={2.5}
@@ -52,7 +66,7 @@ function App() {
     }}>
     <p>Scroll up</p>
   </ParallaxLayer>
-</Parallax>
+</Parallax> */}
 
 
 

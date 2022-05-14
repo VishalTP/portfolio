@@ -12,13 +12,13 @@ const WeatherApp = ({ fifth, setSixth }) => {
     useEffect(() => {
         if (!inView) return
 
-        window.scrollTo({
-            top: fifth + 1,
-            left: 0,
-            behavior: 'smooth'
-        });
-        if(fifth)
-            setSixth(fifth+ reff.current.clientHeight)
+        // window.scrollTo({
+        //     top: fifth + 1,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        // if(fifth)
+        //     setSixth(fifth+ reff.current.clientHeight)
     }, [inView])
 
 

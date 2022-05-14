@@ -12,13 +12,13 @@ const Ecommerce = ({ third, setFourth }) => {
     useEffect(() => {
         if (!inView) return
 
-        window.scrollTo({
-            top: third + 1,
-            left: 0,
-            behavior: 'smooth'
-        });
-        if(third)
-            setFourth(third+ reff.current.clientHeight)
+        // window.scrollTo({
+        //     top: third + 1,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        // if(third)
+        //     setFourth(third+ reff.current.clientHeight)
     }, [inView])
 
 

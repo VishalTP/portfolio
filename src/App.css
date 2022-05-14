@@ -6,7 +6,9 @@
 
 .App{
   overflow: hidden;
+
 }
+
 
 .ani{
   animation: example 1.5s ease-out infinite;
@@ -22,13 +24,15 @@
   70%{transform: translateY(0px);}
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
   
-}
+} */
 
 body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;  
+  /* -ms-overflow-style: none;
+  scrollbar-width: none;   */
   scroll-behavior: smooth;
+  height: 100vh;
+  overflow: hidden;
 }

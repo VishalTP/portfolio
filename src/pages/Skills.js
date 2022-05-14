@@ -8,14 +8,13 @@ const Skills = ({ second, setThird }) => {
     const reff = useRef()
     useEffect(() => {
         if (!inView) return
-        console.log(second)
-        window.scrollTo({
-            top: second + 1,
-            left: 0,
-            behavior: 'smooth'
-        });
-        if(second)
-            setThird(second+ reff.current.clientHeight)
+        // window.scrollTo({
+        //     top: second + 1,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        // if(second)
+        //     setThird(second+ reff.current.clientHeight)
     }, [inView])
 
     return (

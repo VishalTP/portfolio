@@ -10,13 +10,13 @@ const MovieApp = ({ fourth, setFifth }) => {
     useEffect(() => {
         if (!inView) return
 
-        window.scrollTo({
-            top: fourth + 1,
-            left: 0,
-            behavior: 'smooth'
-        });
-        if(fourth)
-        setFifth(fourth+ reff.current.clientHeight)
+        // window.scrollTo({
+        //     top: fourth + 1,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        // if(fourth)
+        // setFifth(fourth+ reff.current.clientHeight)
     }, [inView])
 
     return (
